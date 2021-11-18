@@ -1,0 +1,26 @@
+{
+    "name": "ts-job-ad-pricing-demo",
+    "version": "0.0.1",
+    "description": "A demonstration TypeScript codebase dealing with job ad pricing",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lcolman/ts-job-ad-pricing-demo"
+    },
+    "author": "Lawrence Colman",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build-ts": "tsc",
+        "build": "npm run build-ts && npm run lint",
+        "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+        "demo": "npm install && npm run build && node dist/index.example",
+        "test": "jest --forceExit --coverage --verbose",
+        "watch-test": "npm run test -- --watchAll",
+        "watch-ts": "tsc -w"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "jest": "^27.3.1",
+        "ts-jest": "^27.0.7",
+        "typescript": "^4.5.2"
+    }
+}
